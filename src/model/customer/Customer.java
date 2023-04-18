@@ -8,6 +8,7 @@ public class Customer {
     String email;
 
     public Customer(String firstName, String lastName, String email) {
+        this.validEmail(email);
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;

@@ -1,4 +1,4 @@
-package model;
+package model.room;
 
 public class Room implements IRoom{
     String roomNumber;

@@ -1,4 +1,4 @@
-package model;
+package model.room;
 
 public interface IRoom {
     public String getRoomNumber();

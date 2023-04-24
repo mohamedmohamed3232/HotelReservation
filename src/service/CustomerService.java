@@ -12,8 +12,7 @@ public class CustomerService {
     private static final CustomerService SINGLETON = new CustomerService();
 
 
-    public CustomerService() {
-    }
+    public CustomerService() {}
     public static CustomerService getSingleton() {
         return SINGLETON;
     }

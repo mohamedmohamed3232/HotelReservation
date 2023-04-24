@@ -4,15 +4,15 @@ public enum RoomType {
     SINGLE("1"),
     DOUBLE("2");
 
-    public final String label;
+    public final String type;
 
-    private RoomType(String label) {
-        this.label = label;
+    private RoomType(String type) {
+        this.type = type;
     }
 
-    public static RoomType valueOfLabel(String label) {
+    public static RoomType valueOfType(String type) {
         for (RoomType roomType : values()) {
-            if (roomType.label.equals(label)) {
+            if (roomType.type.equals(type)) {
                 return roomType;
             }
         }

@@ -40,7 +40,7 @@ public class Customer {
     public void validEmail(String email) {
         Pattern pattern = Pattern.compile("^(.+)@(.+).(.+)$");
         if(!pattern.matcher(email).matches()) {
-            throw new IllegalArgumentException("Error, Invaild email");
+            throw new IllegalArgumentException("Error, the email you entered is not valid");
         }
     }
     @Override

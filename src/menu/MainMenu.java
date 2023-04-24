@@ -50,7 +50,7 @@ public class MainMenu {
                 }
             } while (line.charAt(0) != '5' || line.length() != 1);
         } catch (StringIndexOutOfBoundsException ex) {
-            System.out.println("Empty input received. Exiting program...");
+            System.out.println("No input received. Exiting program...");
         }
     }
 

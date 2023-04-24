@@ -8,12 +8,19 @@ import java.util.Date;
 public class Reservation {
     Customer customer;
     IRoom room;
-    Date checInDate;
+    private final Date checkInDate;
+    private final Date checkOutDate;
 
     public Customer getCustomer() {
         return customer;
     }
-
+    public Reservation(final Customer customer, final IRoom room,
+                       final Date checkInDate, final Date checkOutDate) {
+        this.customer = customer;
+        this.room = room;
+        this.checkInDate = checkInDate;
+        this.checkOutDate = checkOutDate;
+    }
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }
@@ -26,12 +33,12 @@ public class Reservation {
         this.room = room;
     }
 
-    public Date getChecInDate() {
-        return checInDate;
+    public Date getCheckInDate() {
+        return checkInDate;
     }
 
-    public void setChecInDate(Date checInDate) {
-        this.checInDate = checInDate;
+    public Date getCheckOutDate() {
+        return checkOutDate;
     }
 
     @Override
@@ -39,7 +46,8 @@ public class Reservation {
         return "Reservation{" +
                 "customer=" + customer +
                 ", room=" + room +
-                ", checInDate=" + checInDate +
+                ", checkInDate=" + checkInDate +
+                ", checkOutDate=" + checkOutDate +
                 '}';
     }
 }

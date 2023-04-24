@@ -9,13 +9,15 @@ import java.util.Collection;
 import java.util.List;
 
 public class AdminResource {
+    private static final AdminResource SINGLETON = new AdminResource();
 
-    private final CustomerService customerService;
-    private final ReservationService reservationService;
+    private final CustomerService customerService = CustomerService.getSingleton();
+    private final ReservationService reservationService = ReservationService.getSingleton();
 
-    public AdminResource(CustomerService customerService, ReservationService reservationService) {
-        this.customerService = customerService;
-        this.reservationService = reservationService;
+    private AdminResource() {}
+
+    public static AdminResource getSingleton() {
+        return SINGLETON;
     }
 
     public Customer getCustomer(String email) {

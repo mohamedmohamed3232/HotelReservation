@@ -46,7 +46,7 @@ public class MainMenu {
                             break;
                     }
                 } else {
-                    System.out.println("Error: Invalid selection please choose a number from our meny\n");
+                    System.out.println("Error: Invalid selection please choose a number from our menu\n");
                 }
             } while (line.charAt(0) != '5' || line.length() != 1);
         } catch (StringIndexOutOfBoundsException ex) {
